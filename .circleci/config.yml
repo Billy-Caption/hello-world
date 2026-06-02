@@ -24,8 +24,5 @@ jobs:
 workflows:
   publish-package-to-code-artifact:
     jobs:
-      - code-quality-check-and-test:
-          context:
-            - PackageAuthentication
-            - CaptionPartners
+      - code-quality-check-and-test
 
