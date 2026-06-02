@@ -8,15 +8,11 @@ def get_mars_weather():
     response = requests.get(url)
     if response.status_code == 200:
         if not response.text:
-            raise Exception(
-                "API returned an empty response — the InSight Weather API was decommissioned in 2022"
-            )
+            raise Exception("API returned an empty response — the InSight Weather API was decommissioned in 2022")
         data = response.json()
         return data
     else:
-        raise Exception(
-            f"Failed to fetch Mars weather data: {response.status_code} — {response.text}"
-        )
+        raise Exception(f"Failed to fetch Mars weather data: {response.status_code} — {response.text}")
 
 
 if __name__ == "__main__":

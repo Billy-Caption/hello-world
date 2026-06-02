@@ -13,7 +13,8 @@ def get_mars_weather():
         return data
     else:
         raise Exception(f"Failed to fetch Mars weather data: {response.status_code} — {response.text}")
-    
+
+
 if __name__ == "__main__":
     mars_weather = get_mars_weather()
     print(mars_weather)
