@@ -22,7 +22,7 @@ jobs:
             uv run pytest
 
 workflows:
-  publish-package-to-code-artifact:
+  CQC_and_test:
     jobs:
       - code-quality-check-and-test
 
